@@ -1,0 +1,6 @@
+[package]
+version = "0.1.0"
+name = { en = "Moegirlpedia", zh = "萌娘百科" }
+summary = { en = "Look up ACG topics on Moegirlpedia, section by section", zh = "查萌娘百科的 ACG 条目，可以按小节读" }
+author = "SHORiN-KiWATA"
+icon = "book"
