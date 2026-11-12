@@ -8,4 +8,4 @@ jobs:
     permissions:
       contents: write
     with:
-      package: miyu-scripts-moegirl-query
+      package: moegirl-query

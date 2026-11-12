@@ -1,4 +1,4 @@
-# 萌娘百科（miyu-scripts-moegirl-query）
+# 萌娘百科（moegirl-query）
 
 给 Miyu 的脚本工具 `moegirl`：查萌娘百科（zh.moegirl.org.cn）的动画、漫画、游戏、虚拟主播等 ACG 条目。
 
