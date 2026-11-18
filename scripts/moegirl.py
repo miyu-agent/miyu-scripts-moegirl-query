@@ -397,8 +397,11 @@ def search(query, limit):
     _, body = get(f"{SITE['base']}/api.php?{params}", "application/json")
     try:
         data = json.loads(body)
+        if isinstance(data, dict) and isinstance(data.get("error"), dict):
+            reason = data["error"].get("info") or data["error"].get("code") or "没说原因"
+            raise Failed(f"萌娘百科的搜索接口报错：{reason}。稍后再试。")
         titles = data[1]
-    except (json.JSONDecodeError, IndexError, TypeError) as exc:
+    except (json.JSONDecodeError, IndexError, KeyError, TypeError) as exc:
         raise Failed("萌娘百科的搜索返回看不懂（可能在维护或要验证），稍后再试。") from exc
     return [{"title": t, "url": page_url(SITE, t)} for t in titles]
 
